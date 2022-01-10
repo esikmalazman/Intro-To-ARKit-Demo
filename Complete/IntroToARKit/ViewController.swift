@@ -115,7 +115,7 @@ extension ViewController {
         let touchLocation = touch.location(in: sceneView)
         // Make a query to convert 2D to 3D coordinate
         guard let raycastQuery = sceneView.raycastQuery(from: touchLocation,
-                                                        allowing: .existingPlaneGeometry,
+                                                        allowing: .estimatedPlane,
                                                         alignment: .horizontal) else {
             print("Could not make raycast query to convert 2D ro 3D coordiate")
             return
